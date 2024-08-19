@@ -8,7 +8,7 @@ export function getRelativeTimeString(
   lang = navigator.language
 ): string {
   // Allow dates or times to be passed
-  const timeMs = typeof date === "number" ? date : date.getTime();
+  const timeMs = typeof date === 'number' ? date : date.getTime();
 
   // Get the amount of seconds between the given date and now
   const deltaSeconds = Math.round((timeMs - Date.now()) / 1000);
@@ -26,13 +26,13 @@ export function getRelativeTimeString(
 
   // Array equivalent to the above but in the string representation of the units
   const units: Intl.RelativeTimeFormatUnit[] = [
-    "second",
-    "minute",
-    "hour",
-    "day",
-    "week",
-    "month",
-    "year",
+    'second',
+    'minute',
+    'hour',
+    'day',
+    'week',
+    'month',
+    'year',
   ];
 
   // Grab the ideal cutoff unit
@@ -45,6 +45,6 @@ export function getRelativeTimeString(
   const divisor = unitIndex ? cutoffs[unitIndex - 1] : 1;
 
   // Intl.RelativeTimeFormat do its magic
-  const rtf = new Intl.RelativeTimeFormat(lang, { numeric: "auto" });
+  const rtf = new Intl.RelativeTimeFormat(lang, { numeric: 'auto' });
   return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex]);
 }
