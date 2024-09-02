@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { cn } from '../Lib/utils';
+import { cn } from '../../Lib/utils';
 
 type NavItemProps = {
   href: string;

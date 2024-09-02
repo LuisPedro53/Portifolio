@@ -1,4 +1,4 @@
-import { cn } from '../Lib/utils';
+import { cn } from '../../Lib/utils';
 
 type SectionTitleProps = {
   title: string;

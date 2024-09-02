@@ -1,4 +1,4 @@
-import { cn } from '../Lib/utils';
+import { cn } from '../../Lib/utils';
 import { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
